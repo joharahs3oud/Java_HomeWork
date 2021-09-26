@@ -143,8 +143,7 @@ int gradesArray[][] = { { 87, 96, 70 },
  { 76, 65, 84 }, 
  { 87, 93, 73 } }; 
 
-GradeBook StudentGradeBook = new GradeBook(
-"CS101 Introduction to Java Programming", gradesArray );
+GradeBook StudentGradeBook = new GradeBook("CS101 Introduction to Java Programming", gradesArray );
 system.out.println("welcome with the grade book for /n%s/n/n", StudentGradeBook.getCourseName());
 StudentGradeBook.processGrades();
 } 
