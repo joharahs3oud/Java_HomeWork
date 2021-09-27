@@ -3,8 +3,26 @@ public class GradeBook{
   private String courseName;
 // instance variable
   private int grades[][]; 
- 
-public GradeBook( String name, int gradesArray[][] )
+  
+ public static void main( String args[] )
+ {
+int gradesArray[][] = { { 87, 96, 70 }, 
+ { 68, 44, 90 }, 
+ { 55, 100, 80 }, 
+ { 100, 98, 82 }, 
+ { 83, 99, 85 }, 
+ { 78, 87, 65 }, 
+ { 85, 75, 83 }, 
+ { 91, 94, 89 }, 
+ { 76, 65, 84 }, 
+ { 87, 93, 73 } }; 
+
+GradeBook StudentGradeBook = new GradeBook("CS101 Introduction to Java Programming", gradesArray );
+system.out.println("welcome with the grade book for /n%s/n/n", StudentGradeBook.getCourseName());
+StudentGradeBook.processGrades();
+} 
+} 
+class GradeBook( String name, int gradesArray[][] )
  {
 // first instance variable 
  courseName = name; 
@@ -127,25 +145,6 @@ double average = getAverage( grades[ student ] );
 System.out.printf( "%9.2f\n", average );
 } 
 } 
-} 
-public class GradeBookTest
- {
- public static void main( String args[] )
- {
-int gradesArray[][] = { { 87, 96, 70 }, 
- { 68, 44, 90 }, 
- { 55, 100, 80 }, 
- { 100, 98, 82 }, 
- { 83, 99, 85 }, 
- { 78, 87, 65 }, 
- { 85, 75, 83 }, 
- { 91, 94, 89 }, 
- { 76, 65, 84 }, 
- { 87, 93, 73 } }; 
+ 
 
-GradeBook StudentGradeBook = new GradeBook("CS101 Introduction to Java Programming", gradesArray );
-system.out.println("welcome with the grade book for /n%s/n/n", StudentGradeBook.getCourseName());
-StudentGradeBook.processGrades();
-} 
-} 
 // In the above code,I have created instance variables.named grades and course name
